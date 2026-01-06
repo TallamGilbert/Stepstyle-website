@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StepStyle - Premium Footwear</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Material UI CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-lite/1.3.0/material.min.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="#" class="logo">
+            <i class="fas fa-shoe-prints"></i>
+            <span>StepStyle</span>
+        </a>
+        
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#shop">Shop</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        
+        <div style="display: flex; align-items: center; gap: 1rem;">
+            <div class="cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-badge">0</span>
+            </div>
+            <button class="mobile-menu-btn" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Step Up Your Style</h1>
+            <p>Discover premium footwear for every occasion</p>
+            <button class="btn-primary" onclick="scrollToShop()">Shop Now</button>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" id="shop">
+        <h2 class="section-title">Explore Our Collections</h2>
+        <div class="products-grid">
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?w=600" alt="Men's Collection" class="product-image">
+                <div class="product-info">
+                    <h3>Men's Collection</h3>
+                    <p>Classic and contemporary styles for the modern gentleman</p>
+                    <button class="btn-secondary" onclick="openModal('men')">View Collection</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=600" alt="Women's Collection" class="product-image">
+                <div class="product-info">
+                    <h3>Women's Collection</h3>
+                    <p>Elegant footwear that combines style and comfort</p>
+                    <button class="btn-secondary" onclick="openModal('women')">View Collection</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1514989940723-e8e51635b782?w=600" alt="Kids Collection" class="product-image">
+                <div class="product-info">
+                    <h3>Kids Collection</h3>
+                    <p>Fun and durable shoes for little adventurers</p>
+                    <button class="btn-secondary" onclick="openModal('kids')">View Collection</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600" alt="Sports Collection" class="product-image">
+                <div class="product-info">
+                    <h3>Sports Collection</h3>
+                    <p>Performance footwear for athletes and enthusiasts</p>
+                    <button class="btn-secondary" onclick="openModal('sports')">View Collection</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1587563871167-1ee9c731aefb?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2FzdWFsJTIwc2hvZXN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=600" alt="Casual Collection" class="product-image">
+                <div class="product-info">
+                    <h3>Casual Collection</h3>
+                    <p>Everyday shoes that blend comfort with style</p>
+                    <button class="btn-secondary" onclick="openModal('casual')">View Collection</button>
+                </div>
+
+            </div>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1641893843833-a006778dc00b?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Zm9ybWFsJTIwc2hvZXN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=600" alt="Formal Collection" class="product-image">
+                <div class="product-info">
+                    <h3>Formal Collection</h3>
+                    <p>Sophisticated footwear for special occasions</p>
+                    <button class="btn-secondary" onclick="openModal('formal')">View Collection</button>
+                </div>
+        </div>
+    </section>
+
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <h2 class="section-title">About StepStyle</h2>
+        <div class="about-card">
+            <h3>Our Story</h3>
+            <p>Welcome to StepStyle, your go-to place for stylish and comfortable shoes. <br>We offer a wide range of footwear for men, women, and kids designed to keep you looking good and feeling great.
+
+            <br>At StepStyle, we believe every step counts. That’s why we focus on quality, comfort, and modern design in every pair we sell. Whether you’re going out, working, or training, we’ve got the perfect fit for you.
+
+            <br>StepStyle; where every step makes a statement.</p>
+
+        </div>
+    </section>
+
+    <section class="delivery-info">
+    <h2 class="section-title">Why Shop With Us</h2>
+    <div class="info-cards">
+        <div class="info-card">
+            <div class="info-icon">
+                <i class="fas fa-truck"></i>
+            </div>
+            <h3>Free Delivery</h3>
+            <p>Free shipping on orders over KSh 5,000 within Nairobi. Countrywide delivery available.</p>
+            <ul class="delivery-list">
+                <li><i class="fas fa-check"></i> Nairobi: 1-2 days</li>
+                <li><i class="fas fa-check"></i> Major Cities: 2-4 days</li>
+                <li><i class="fas fa-check"></i> Other Areas: 3-7 days</li>
+            </ul>
+        </div>
+
+        <div class="info-card">
+            <div class="info-icon">
+                <i class="fas fa-shield-alt"></i>
+            </div>
+            <h3>Secure Payment</h3>
+            <p>Multiple payment options for your convenience and security.</p>
+            <div class="payment-methods">
+                <div class="payment-badge">
+                    <i class="fas fa-mobile-alt"></i>
+                    <span>M-Pesa</span>
+                </div>
+                <div class="payment-badge">
+                    <i class="fab fa-cc-visa"></i>
+                    <span>Visa</span>
+                </div>
+                <div class="payment-badge">
+                    <i class="fab fa-cc-mastercard"></i>
+                    <span>Mastercard</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-card">
+            <div class="info-icon">
+                <i class="fas fa-undo"></i>
+            </div>
+            <h3>Easy Returns</h3>
+            <p>Not satisfied? We offer hassle-free returns within 7 days.</p>
+            <ul class="delivery-list">
+                <li><i class="fas fa-check"></i> 7-day return policy</li>
+                <li><i class="fas fa-check"></i> Full refund guarantee</li>
+                <li><i class="fas fa-check"></i> Free return shipping</li>
+            </ul>
+        </div>
+
+        <div class="info-card">
+            <div class="info-icon">
+                <i class="fas fa-headset"></i>
+            </div>
+            <h3>24/7 Support</h3>
+            <p>Our customer service team is always ready to help you.</p>
+            <ul class="delivery-list">
+                <li><i class="fas fa-check"></i> Live chat support</li>
+                <li><i class="fas fa-check"></i> Phone & WhatsApp</li>
+                <li><i class="fas fa-check"></i> Email support</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+
+
+   
+    
+
+    <!-- Team Section -->
+    <section class="team">
+        <h2 class="section-title">Meet Our Team</h2>
+        <div class="team-grid">
+            <div class="team-member">
+                <img src="/James Kamau.jpeg" alt="Team Member" class="team-image">
+                <h3>James Kamau</h3>
+                <p>Founder & CEO</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="team-member">
+                <img src="/Grace Wanjiku.jpeg" alt="Team Member" class="team-image">
+                <h3>Grace Wanjiku</h3>
+                <p>Head of Design</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="team-member">
+                <img src="/Professional headshots.jpeg" alt="Team Member" class="team-image">
+                <h3>David Omondi</h3>
+                <p>Customer Experience Director</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="testimonials">
+    <h2 class="section-title">What Our Customers Say</h2>
+    <div class="testimonials-container">
+        <button class="testimonial-nav prev" onclick="slideTestimonials(-1)">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        
+        <div class="testimonials-wrapper">
+            <div class="testimonial-card active">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="testimonial-text">"I bought the Nike running shoes from StepStyle and they're amazing! The delivery was quick and the quality is top-notch. Highly recommend for anyone in Nairobi looking for quality footwear."</p>
+                <div class="customer-info">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100" alt="Customer">
+                    <div>
+                        <h4>Mary Njeri</h4>
+                        <p>Nairobi, Kenya</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="testimonial-text">"Best shoe shop in Kenya! I got formal shoes for my wedding and they were perfect. The customer service was exceptional and they helped me choose the right size."</p>
+                <div class="customer-info">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100" alt="Customer">
+                    <div>
+                        <h4>Peter Mwangi</h4>
+                        <p>Mombasa, Kenya</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <p class="testimonial-text">"My kids love their new school shoes from StepStyle! They're comfortable, durable, and affordable. The whole family now shops here. Great experience!"</p>
+                <div class="customer-info">
+                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100" alt="Customer">
+                    <div>
+                        <h4>Grace Akinyi</h4>
+                        <p>Kisumu, Kenya</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button class="testimonial-nav next" onclick="slideTestimonials(1)">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+    </div>
+    <div class="testimonial-dots">
+        <span class="dot active" onclick="currentTestimonial(0)"></span>
+        <span class="dot" onclick="currentTestimonial(1)"></span>
+        <span class="dot" onclick="currentTestimonial(2)"></span>
+    </div>
+</section>
+
+
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="contact-container">
+            <div class="contact-form">
+                <form onsubmit="handleSubmit(event)">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary">Send Message</button>
+                </form>
+            </div>
+
+            <div class="contact-info">
+                <div class="info-item">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <h3>Phone</h3>
+                        <p>+254 712 345 678</p>
+                        <p>+254 733 456 789</p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h3>Email</h3>
+                        <p>info@stepstyle.co.ke</p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h3>Address</h3>
+                        <p>The Hub, Karen, Nairobi, Kenya</p>
+                    </div>
+                </div>
+
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31910.59499730481!2d36.79235699999999!3d-1.286389!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1a6bf7445dc1%3A0x940b62a3c8efde4c!2sThe%20Hub%20Karen!5e0!3m2!1sen!2ske!4v1704905878395!5m2!1sen!2ske" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+      
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="newsletter-content">
+            <h2 class="section-title">Join Our Community</h2>
+            <p>Subscribe for exclusive offers, new arrivals, and style tips</p>
+            <form id="newsletterForm" class="newsletter-form">
+                <input type="email" placeholder="Enter your email address" required>
+                <button type="submit" class="btn-primary">Subscribe</button>
+            </form>
+        </div>
+    </section>
+    
+ 
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-socials">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+        <p>&copy; 2025 StepStyle Kenya. All rights reserved.</p>
+    </footer>
+
+     <!-- Modal for Shoe Collections -->
+    <div id="shoeModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div style="display: flex; align-items: center;">
+                    <i class="category-icon fas fa-shoe-prints"></i>
+                    <h2 id="modalTitle">Collection</h2>
+                </div>
+                <button class="close-modal" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="shoes-grid" id="shoesGrid"></div>
+            </div>
+        </div>
+    </div>
+    <div id="cartSidebar" class="cart-sidebar">
+    <div class="cart-header">
+        <h3><i class="fas fa-shopping-bag"></i> Shopping Cart</h3>
+        <button class="close-cart" onclick="closeCart()">&times;</button>
+    </div>
+    <div class="cart-items" id="cartItems">
+        <div class="empty-cart">
+            <i class="fas fa-shopping-cart"></i>
+            <p>Your cart is empty</p>
+        </div>
+    </div>
+    <div class="cart-footer">
+        <div class="cart-total">
+            <span>Subtotal:</span>
+            <span id="cartTotal">KSh 0</span>
+        </div>
+        <button class="btn-checkout" onclick="checkout()">
+            <i class="fas fa-lock"></i> Proceed to Checkout
+        </button>
+        <button class="btn-continue" onclick="closeCart()">Continue Shopping</button>
+    </div>
+</div>
+<div id="cartOverlay" class="cart-overlay" onclick="closeCart()"></div>
+
+<a href="https://wa.me/254712345678?text=Hi%20StepStyle!%20I%20need%20help%20with..." 
+   class="whatsapp-float" 
+   target="_blank"
+   title="Chat with us on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+    <span class="whatsapp-tooltip">Need help? Chat with us!</span>
+</a>
+
+   <script src="script.js"></script>
+      
+    
+</body>
+</html>
