@@ -94,4 +94,4 @@ No license is specified. Add a `LICENSE` file (for example, MIT) if you intend t
 
 ---
 
-If you want additional sections (examples, screenshots, API details, or a chosen license), tell me what to include and I'll update the README.
+
